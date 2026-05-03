@@ -1,0 +1,129 @@
+vocabulary:
+  name: WasmEdge Vocabulary
+  description: >-
+    Domain vocabulary for WasmEdge, the CNCF sandbox WebAssembly runtime for
+    cloud native, edge, and decentralized applications. Covers runtime
+    internals, embedding APIs, plugin architecture, and deployment patterns.
+  version: '1.0'
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  tags:
+    - Cloud Native
+    - CNCF
+    - WebAssembly
+    - Edge Computing
+  terms:
+    - term: WasmEdge Runtime
+      definition: >-
+        The core execution engine of WasmEdge that interprets or executes
+        compiled WebAssembly modules. Supports both interpreter mode and
+        AoT-compiled native execution. Implements the WebAssembly MVP spec
+        and numerous proposals (SIMD, bulk memory, multi-value, etc.).
+      tags:
+        - Core Concept
+    - term: AoT Compiler
+      definition: >-
+        Ahead-of-Time compiler in WasmEdge based on LLVM that compiles
+        WebAssembly bytecode to native machine code before execution. Produces
+        a shared library (.so or .dylib) that the runtime loads for maximum
+        performance — significantly faster than interpreted execution.
+      tags:
+        - Performance
+        - Compilation
+    - term: WASI
+      definition: >-
+        WebAssembly System Interface — a standardized API for WebAssembly
+        modules to access OS-level capabilities like file systems, sockets,
+        clocks, and random number generation. WasmEdge implements WASI and
+        extends it with additional proposals for networking and crypto.
+      tags:
+        - Standard
+        - Interfaces
+    - term: WASI-NN
+      definition: >-
+        A WASI proposal and WasmEdge plugin providing a machine learning
+        inference API. WasmEdge's WASI-NN plugin supports TensorFlow,
+        TensorFlow Lite, PyTorch, and OpenVINO backends, enabling AI inference
+        from within WebAssembly modules without Python dependencies.
+      tags:
+        - AI
+        - Machine Learning
+        - Plugin
+    - term: Plugin
+      definition: >-
+        A host-native shared library that extends WasmEdge with additional
+        host function packages. Plugins are loaded at runtime and expose new
+        WebAssembly host imports. Standard plugins include wasi_nn (AI),
+        wasi_crypto (cryptography), wasi_logging, and WASM-BPF.
+      tags:
+        - Extension
+        - Plugin System
+    - term: Host Function
+      definition: >-
+        A native function implemented in the host language (C, Rust, Go, etc.)
+        that is registered in the WasmEdge store and callable from WebAssembly
+        modules as an import. Host functions bridge WebAssembly's sandboxed
+        environment to native capabilities.
+      tags:
+        - Embedding
+        - Extension
+    - term: VM (Virtual Machine)
+      definition: >-
+        WasmEdge's high-level API object combining a Store, Executor, and
+        optional Configuration for loading and running WebAssembly modules.
+        The VM is the primary entry point for the embedding SDKs.
+      tags:
+        - Embedding
+        - API
+    - term: Store
+      definition: >-
+        The WasmEdge Store holds all instantiated module instances, function
+        instances, table instances, memory instances, and global instances.
+        Multiple modules can be registered in a single store and call each
+        other's exported functions.
+      tags:
+        - Runtime
+    - term: Executor
+      definition: >-
+        The component responsible for executing WebAssembly instructions within
+        the WasmEdge runtime, whether in interpreter mode or using AoT-compiled
+        native code.
+      tags:
+        - Runtime
+    - term: Gas Meter
+      definition: >-
+        A resource limiting mechanism in WasmEdge that assigns a cost to each
+        WebAssembly instruction and halts execution when a gas limit is
+        exceeded. Useful for smart contract environments and serverless
+        functions that need bounded computation.
+      tags:
+        - Security
+        - Resource Management
+    - term: WASM-BPF
+      definition: >-
+        A WasmEdge plugin enabling WebAssembly modules to interact with the
+        Linux eBPF (Extended Berkeley Packet Filter) kernel subsystem from
+        user space. Allows Wasm programs to load, run, and communicate with
+        eBPF programs for networking and observability use cases.
+      tags:
+        - eBPF
+        - Plugin
+        - Linux
+    - term: runwasi
+      definition: >-
+        A containerd-shim implementation that enables running WebAssembly
+        workloads as OCI containers using WasmEdge (or other Wasm runtimes).
+        runwasi allows Kubernetes to schedule Wasm containers alongside
+        traditional Linux containers.
+      tags:
+        - Kubernetes
+        - Container
+        - OCI
+    - term: crun
+      definition: >-
+        A fast, low-memory OCI container runtime that supports WebAssembly
+        workloads via WasmEdge integration. With WasmEdge's crun integration,
+        podman and Kubernetes can run Wasm containers natively.
+      tags:
+        - Container
+        - OCI

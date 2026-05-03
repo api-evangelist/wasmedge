@@ -1,0 +1,52 @@
+{
+  "name": "WasmEdge Configuration",
+  "description": "Structure of the WasmEdge runtime configuration object used when creating a WasmEdge VM or Store",
+  "type": "object",
+  "fields": [
+    {
+      "name": "statistics",
+      "type": "object",
+      "required": false,
+      "description": "Profiling and measurement settings",
+      "fields": [
+        { "name": "instructionCounting", "type": "boolean", "description": "Count executed Wasm instructions" },
+        { "name": "costMeasuring", "type": "boolean", "description": "Enable gas/cost metering" },
+        { "name": "timeMeasuring", "type": "boolean", "description": "Measure wall-clock execution time" }
+      ]
+    },
+    {
+      "name": "compiler",
+      "type": "object",
+      "required": false,
+      "description": "LLVM AoT compiler settings",
+      "fields": [
+        { "name": "optLevel", "type": "string", "description": "LLVM optimization level: O0-O3, Os, Oz" },
+        { "name": "dumpIR", "type": "boolean", "description": "Dump LLVM IR for debugging" },
+        { "name": "genericBinary", "type": "boolean", "description": "Produce portable generic binary" },
+        { "name": "interruptible", "type": "boolean", "description": "Support execution interruption" }
+      ]
+    },
+    {
+      "name": "runtime",
+      "type": "object",
+      "required": false,
+      "description": "Interpreter runtime settings",
+      "fields": [
+        { "name": "maxMemoryPage", "type": "integer", "description": "Max Wasm memory pages (65536 = 4GB)" }
+      ]
+    },
+    {
+      "name": "plugins",
+      "type": "array",
+      "required": false,
+      "description": "Plugin libraries to load",
+      "items": {
+        "type": "object",
+        "fields": [
+          { "name": "name", "type": "string", "required": true, "description": "Plugin identifier" },
+          { "name": "path", "type": "string", "required": false, "description": "Path to .so/.dylib file" }
+        ]
+      }
+    }
+  ]
+}

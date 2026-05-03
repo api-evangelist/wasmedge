@@ -1,0 +1,31 @@
+{
+  "summary": "WasmEdge CLI - Run a WebAssembly Module",
+  "description": "Example CLI commands for running WebAssembly modules with WasmEdge, including basic execution, AoT compilation, and WASI arguments",
+  "examples": [
+    {
+      "title": "Run a Wasm module",
+      "command": "wasmedge hello.wasm",
+      "description": "Execute a WebAssembly module with WasmEdge interpreter"
+    },
+    {
+      "title": "Run with WASI arguments",
+      "command": "wasmedge --dir .:. hello.wasm arg1 arg2",
+      "description": "Run a WASI module with directory access and command-line arguments"
+    },
+    {
+      "title": "Compile to AoT native binary",
+      "command": "wasmedgec hello.wasm hello_aot.wasm",
+      "description": "Use the AoT compiler to produce a native shared library for maximum performance"
+    },
+    {
+      "title": "Run AoT compiled module",
+      "command": "wasmedge hello_aot.wasm",
+      "description": "Execute the AoT-compiled native binary (auto-detected as shared library)"
+    },
+    {
+      "title": "Run with WASI-NN TensorFlow plugin",
+      "command": "wasmedge --nn-preload default:TensorflowLite:AUTO:model.tflite classify.wasm",
+      "description": "Run a Wasm module with a pre-loaded TensorFlow Lite model for AI inference"
+    }
+  ]
+}

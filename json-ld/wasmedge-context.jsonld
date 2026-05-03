@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "wasmedge": "https://wasmedge.org/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "wasm": "https://webassembly.github.io/spec/core/vocab#",
+    "cncf": "https://cncf.io/vocab#",
+
+    "WasmEdgeRuntime": "wasmedge:WasmEdgeRuntime",
+    "WasmModule": "wasmedge:WasmModule",
+    "WasmFunction": "wasmedge:WasmFunction",
+    "Plugin": "wasmedge:Plugin",
+    "HostFunction": "wasmedge:HostFunction",
+    "Configuration": "wasmedge:Configuration",
+    "AoTCompiler": "wasmedge:AoTCompiler",
+    "Store": "wasmedge:Store",
+    "VM": "wasmedge:VM",
+    "Executor": "wasmedge:Executor",
+
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "schema:softwareVersion",
+      "@type": "xsd:string"
+    },
+    "license": {
+      "@id": "schema:license"
+    },
+    "codeRepository": {
+      "@id": "schema:codeRepository",
+      "@type": "@id"
+    },
+
+    "optLevel": {
+      "@id": "wasmedge:optLevel",
+      "@type": "xsd:string"
+    },
+    "maxMemoryPage": {
+      "@id": "wasmedge:maxMemoryPage",
+      "@type": "xsd:integer"
+    },
+    "pluginName": {
+      "@id": "wasmedge:pluginName",
+      "@type": "xsd:string"
+    },
+    "wasiNn": {
+      "@id": "wasmedge:wasiNn"
+    },
+    "wasiCrypto": {
+      "@id": "wasmedge:wasiCrypto"
+    },
+    "language": {
+      "@id": "schema:programmingLanguage"
+    },
+    "runtime": {
+      "@id": "schema:runtimePlatform"
+    },
+    "operatingSystem": {
+      "@id": "schema:operatingSystem"
+    },
+    "supportedPlatforms": {
+      "@id": "wasmedge:supportedPlatforms",
+      "@container": "@list"
+    }
+  }
+}

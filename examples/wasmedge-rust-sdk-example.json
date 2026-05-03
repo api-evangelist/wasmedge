@@ -1,0 +1,18 @@
+{
+  "summary": "WasmEdge Rust SDK - Load and Run a Wasm Function",
+  "description": "Example showing how to use the WasmEdge Rust SDK to load a WebAssembly module and call an exported function",
+  "language": "rust",
+  "example": {
+    "description": "Load a Wasm module and call an exported 'add' function that takes two i32 parameters",
+    "code_snippet": "use wasmedge_sdk::{VmBuilder, WasmVal, params, ValType, error::HostFuncError, Vm, WasmValue};\\n\\nlet vm = VmBuilder::new().build()?;\\nvm.register_module_from_file(\"math\", \"math.wasm\")?;\\nlet result = vm.run_func(Some(\"math\"), \"add\", params!(1_i32, 2_i32))?;\\nprintln!(\"1 + 2 = {}\", result[0].to_i32());",
+    "inputs": {
+      "module_name": "math",
+      "wasm_file": "math.wasm",
+      "function": "add",
+      "parameters": [1, 2]
+    },
+    "outputs": {
+      "result": [3]
+    }
+  }
+}

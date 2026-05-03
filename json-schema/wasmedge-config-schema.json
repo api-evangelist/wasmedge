@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wasmedge.org/schemas/config.json",
+  "title": "WasmEdge Configuration",
+  "description": "Schema for WasmEdge runtime configuration, covering statistics, compiler (AoT) settings, and runtime behavior options",
+  "type": "object",
+  "properties": {
+    "statistics": {
+      "type": "object",
+      "description": "Runtime statistics and instrumentation settings",
+      "properties": {
+        "instructionCounting": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable WebAssembly instruction counting for profiling"
+        },
+        "costMeasuring": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable gas/cost metering for resource limiting"
+        },
+        "timeMeasuring": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable execution time measurement"
+        }
+      }
+    },
+    "compiler": {
+      "type": "object",
+      "description": "Ahead-of-Time (AoT) compiler configuration",
+      "properties": {
+        "optLevel": {
+          "type": "string",
+          "enum": ["O0", "O1", "O2", "O3", "Os", "Oz"],
+          "default": "O3",
+          "description": "LLVM optimization level for AoT compilation"
+        },
+        "dumpIR": {
+          "type": "boolean",
+          "default": false,
+          "description": "Dump LLVM IR after compilation for debugging"
+        },
+        "genericBinary": {
+          "type": "boolean",
+          "default": false,
+          "description": "Generate generic (non-native) binary for portability"
+        },
+        "interruptible": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable interruptible execution support"
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "description": "Runtime execution settings",
+      "properties": {
+        "maxMemoryPage": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 65536,
+          "description": "Maximum allowed WebAssembly memory pages (64KB each)"
+        }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "description": "List of plugin libraries to load at startup",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Plugin name (e.g., wasi_nn, wasi_crypto)"
+          },
+          "path": {
+            "type": "string",
+            "description": "Optional path to the plugin shared library"
+          }
+        }
+      }
+    }
+  }
+}
