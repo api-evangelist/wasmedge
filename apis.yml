@@ -119,7 +119,7 @@ common:
     url: https://wasmedge.org/
   - type: Documentation
     url: https://wasmedge.org/docs/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://wasmedge.org/docs/start/getting-started/
   - type: GitHubOrganization
     url: https://github.com/WasmEdge
@@ -133,7 +133,7 @@ common:
     url: https://discord.gg/U4B5sFTkFc
   - type: Vocabulary
     url: vocabulary/wasmedge-vocabulary.yml
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/wasmedge-context.jsonld
   - type: JSONSchema
     url: json-schema/wasmedge-config-schema.json
