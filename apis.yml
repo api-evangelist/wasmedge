@@ -115,6 +115,8 @@ apis:
       - TensorFlow
       - AI
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/second-state
   - type: Website
     url: https://wasmedge.org/
   - type: Documentation
