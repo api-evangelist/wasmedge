@@ -2,6 +2,10 @@
   "repo": "wasmedge",
   "feeds": [
     {
+      "source": "https://wasmedge.org/blog/",
+      "error": "HTTPError"
+    },
+    {
       "source": "https://github.com/WasmEdge/WasmEdge",
       "feed_url": "https://github.com/WasmEdge/WasmEdge",
       "title": "",
@@ -9,6 +13,6 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-06-01T23:35:02Z",
+  "fetched": "2026-06-14T20:42:17Z",
   "post_count": 0
 }
