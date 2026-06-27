@@ -3,16 +3,10 @@
   "feeds": [
     {
       "source": "https://wasmedge.org/blog/",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://github.com/WasmEdge/WasmEdge",
-      "feed_url": "https://github.com/WasmEdge/WasmEdge",
-      "title": "",
       "saved": 0,
-      "method": "none"
+      "error": "404 Not Found on blog listing"
     }
   ],
-  "fetched": "2026-06-14T20:42:17Z",
+  "fetched": "2026-06-27T13:21:06Z",
   "post_count": 0
 }
