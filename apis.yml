@@ -115,6 +115,8 @@ apis:
       - TensorFlow
       - AI
 common:
+  - type: DomainSecurity
+    url: security/wasmedge-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/second-state
   - type: Website
