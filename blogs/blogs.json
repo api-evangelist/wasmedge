@@ -2,11 +2,13 @@
   "repo": "wasmedge",
   "feeds": [
     {
-      "source": "https://wasmedge.org/blog/",
+      "source": "https://github.com/WasmEdge/WasmEdge",
+      "feed_url": "https://github.com/WasmEdge/WasmEdge",
+      "title": "",
       "saved": 0,
-      "error": "404 Not Found on blog listing"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T13:21:06Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
