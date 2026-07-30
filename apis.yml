@@ -9,7 +9,19 @@ description: >-
   non-blocking networking, database access, and AI inference via TensorFlow,
   PyTorch, and OpenVINO.
 url: https://wasmedge.org
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wasmedge.png
 tags:
   - Cloud Native
   - CNCF
