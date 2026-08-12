@@ -127,6 +127,9 @@ apis:
       - TensorFlow
       - AI
 common:
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/WasmEdge/WasmEdge/blob/master/LICENSE
   - type: DomainSecurity
     url: security/wasmedge-domain-security.yml
   - type: LinkedIn
