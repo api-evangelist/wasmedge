@@ -33,7 +33,7 @@ tags:
   - WebAssembly
 created: '2026-03-26'
 modified: '2026-05-03'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 type: Index
 apis:
   - aid: wasmedge:wasmedge-c-api
