@@ -23,6 +23,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wasmedge.png
 tags:
+  - Cloud-Native
+  - CNCF
+  - Edge Computing
+  - High Performance
+  - Runtime
+  - Serverless
+  - Wasm
+  - WebAssembly
+tags_raw:
   - Cloud Native
   - CNCF
   - Edge Computing
@@ -51,6 +60,10 @@ apis:
       - type: GitHubRepository
         url: https://github.com/WasmEdge/WasmEdge
     tags:
+      - C API
+      - Embedding
+      - Low-Level
+    tags_raw:
       - C API
       - Embedding
       - Low Level
@@ -122,6 +135,11 @@ apis:
       - type: GitHubRepository
         url: https://github.com/WasmEdge/WasmEdge
     tags:
+      - Plugins
+      - Extensions
+      - TensorFlow
+      - Artificial Intelligence
+    tags_raw:
       - Plugins
       - Extensions
       - TensorFlow
