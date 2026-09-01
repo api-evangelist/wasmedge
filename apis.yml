@@ -74,7 +74,7 @@ apis:
     tags:
       - C API
       - Embedding
-      - Low Level
+      - Low-Level
     tags_raw:
       - C API
       - Embedding
