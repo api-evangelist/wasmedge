@@ -73,7 +73,7 @@ apis:
         url: https://github.com/WasmEdge/WasmEdge
     tags:
       - C API
-      - Embedding
+      - Embeddings
       - Low-Level
     tags_raw:
       - C API
@@ -96,6 +96,10 @@ apis:
     tags:
       - Rust
       - SDK
+      - Embeddings
+    tags_raw:
+      - Rust
+      - SDK
       - Embedding
   - aid: wasmedge:wasmedge-go-sdk
     name: WasmEdge Go SDK
@@ -114,6 +118,10 @@ apis:
     tags:
       - Go
       - SDK
+      - Embeddings
+    tags_raw:
+      - Go
+      - SDK
       - Embedding
   - aid: wasmedge:wasmedge-nodejs-sdk
     name: WasmEdge Node.js SDK
@@ -128,6 +136,11 @@ apis:
       - type: Documentation
         url: https://wasmedge.org/docs/embed/node/
     tags:
+      - Node.js
+      - JavaScript
+      - SDK
+      - Embeddings
+    tags_raw:
       - Node.js
       - JavaScript
       - SDK
